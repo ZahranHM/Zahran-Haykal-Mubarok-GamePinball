@@ -12,6 +12,8 @@ public class BallController : MonoBehaviour
 
     public KeyCode resetBallinput;
 
+    public Collider respawn; //Feature 1 Respawn Ball
+
     private void Start()
     {
         rig = GetComponent<Rigidbody>();
@@ -22,7 +24,7 @@ public class BallController : MonoBehaviour
     private void Update()
     {
         ReadInput();
-        
+
         // cek besaran (magnitude) kecepatannya
         if (rig.velocity.magnitude > maxSpeed)
         {
@@ -37,6 +39,17 @@ public class BallController : MonoBehaviour
         {
             rig.velocity *= 0;
             ballCurrentPosition.position = ballInitPosition;
+        }
+    }
+
+    //respawanball
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider == respawn)
+        {
+            rig.velocity *= 0;
+            ballCurrentPosition.position = ballInitPosition;
+
         }
     }
 }
