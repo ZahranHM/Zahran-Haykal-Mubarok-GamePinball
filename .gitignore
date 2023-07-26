@@ -3,6 +3,8 @@ Logs/*
 Temp/* 
 .vs/* 
 obj/* 
+UserSettings/*
+
  
 .vsconfig 
 *.sln 

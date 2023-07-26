@@ -49,7 +49,12 @@ public class BallController : MonoBehaviour
         {
             rig.velocity *= 0;
             ballCurrentPosition.position = ballInitPosition;
-
+        }
+        if (collision.collider.CompareTag("Trap"))
+        {
+            rig.velocity *= 0;
+            Destroy(collision.gameObject);
+            ballCurrentPosition.position = ballInitPosition;
         }
     }
 }
