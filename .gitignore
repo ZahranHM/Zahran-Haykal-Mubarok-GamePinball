@@ -3,11 +3,12 @@ Logs/*
 Temp/* 
 .vs/* 
 obj/* 
+
+Assets/*
+Packages/*
+ProjectSettings/*
 UserSettings/*
 
- 
 .vsconfig 
 *.sln 
 *.csproj 
-
-Build/*
